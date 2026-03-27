@@ -7,7 +7,6 @@ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
 
-ads_names = '<div class="inzeraty inzeratyflex">'
 advertisements: list[BeautifulSoup] = soup.find_all("div", "inzeraty")
 
 for i, ad in enumerate(advertisements):
